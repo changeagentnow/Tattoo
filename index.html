@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vote on my next tattoo</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Vote on my next tattoo</h1>
+      <p class="sub">Pick your favorite idea below, or add one of your own. One vote per person — you can change your mind any time.</p>
+    </header>
+
+    <section id="status" class="status" hidden></section>
+
+    <ul id="options" class="options" aria-live="polite">
+      <!-- options render here -->
+    </ul>
+
+    <form id="add-form" class="add-form">
+      <label for="new-option">Have a better idea?</label>
+      <div class="add-row">
+        <input
+          id="new-option"
+          name="new-option"
+          type="text"
+          maxlength="140"
+          placeholder="e.g. A compass with a Bible verse"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Add option</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
